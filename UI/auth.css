@@ -1,0 +1,67 @@
+body{
+    background: white;
+}
+.sign-in-card{
+    padding: 10px 15px;
+    border: 1px solid grey;
+    display: block;
+    margin: 0px auto;
+    max-width: 350px;
+    color: dimgray;
+    min-height: 350px;
+    box-shadow: 1px 1px 5px black;
+}
+.sign-in-card input{
+    width: 100%;
+    margin: 0px 0px;
+    height: 30px;
+    border: 1px solid grey;
+    padding: 0px 40px;
+}
+.sign-in-card button{
+    background-color: cornflowerblue;
+    padding: 10px 30px;
+    width: 100%;
+    border: 1px solid cornflowerblue;
+    color: white;
+}
+.sign-in-card h3{
+    text-align: center;
+    margin: 20px auto;
+}
+.sign-in-card form div{
+    margin: 0px;
+}
+.sign-in-card form div i{
+    color: green;
+    background: rgba(0, 128, 0, 0.301);
+    display: inline-block;
+    position: relative;
+    top:-29px;
+    left: 1px;
+    padding: 6px 7px;
+    border-right: 1px solid green
+}
+
+[a-signup], [forgotp]{
+    text-decoration: none;
+    color: darkslategrey;
+    font-size: 0.8em;
+    float: right;
+    cursor: pointer;    
+}
+[a-signup]{
+    margin-left: 50%; 
+}
+[forgotp]{
+    color: red;
+}
+[a-signup]:hover, [forgotp]:hover{
+    font-style: italic;
+}
+.logo-sm{
+    margin: 10px 30px;
+}
+.hidden{
+    display: none;
+}

@@ -1,0 +1,166 @@
+body{
+    margin: 0px;
+    font-family: "Century Gothic", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+    color: grey;
+}
+*{
+    box-sizing: border-box;
+}
+div.nav{
+    background: white;
+    box-shadow: 1px 1px 5px grey;
+    color: darkslateblue;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+}
+div.nav>i.fas.fa-bars{
+    font-size: 26px;
+    margin: 5px 20px;
+    float: left;
+}
+div.nav > div.search{
+    display: block;
+    margin: 0px auto 0px auto;
+    width: 50%;
+    margin-top: -35px;  
+}
+div.nav > div.search> input{
+    border: 1px solid grey;
+    height: 30px;
+    width: 100%;
+    padding: 0px 50px;
+    border-radius: 4px;
+}
+div.search>i.fas.fa-search{
+    position: relative;
+    left: 10px;
+    top: 24px;
+}
+div.search i.far.fa-paper-plane{
+    transform: rotateZ(60deg);
+    font-size: 16px;
+    color: grey;
+   
+}
+[plane-span]{
+   border-left: 1px solid lightgrey;
+    position: relative;
+    left: 90%;
+    top: -24px;
+    padding: 5px 20px;
+}
+
+
+div.nav>i.fas.fa-comment-dots, div.nav>i.fas.fa-cog{
+    position: relative;
+    top: 12px;
+    left: 75%;
+    margin: 0px 10px;
+}
+span[balance]{
+    float: right;
+    margin: 10px;
+}
+
+@media screen and (max-width: 900px){
+    [plane-span]{
+        padding: 5px 0px;
+        border-left: none;
+    }
+    div.nav>i.fas.fa-comment-dots, div.nav>i.fas.fa-cog{
+        
+        left: 75%;
+       
+    }
+}
+@media screen and (max-width: 800px){
+    
+    div.nav>i.fas.fa-comment-dots, div.nav>i.fas.fa-cog{
+        
+        left: 70%;
+       
+    }
+}
+@media screen and (max-width: 700px){
+    
+    span[balance]{
+        display: none;
+    }
+}
+
+/* End of Nav */
+
+div[main-container]{
+    margin: 0px auto;
+    width: 70%;
+    height: 1000px;
+    padding: 100px 10px;
+    text-align: center;
+}
+div[main-container] i.far.fa-user{
+    font-size: 150px;
+    color: darkslateblue;
+}
+
+div[main-container] div[contact]{
+    background: #fff;
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+    font-size: 14px;
+}
+div[contact] div{
+    display: inline-block;
+    padding: 5px;
+    width: 48%;
+    color: darkslateblue;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 2px;
+    transition: 0.5s;
+}
+div[contact] div[follow]{
+    width: 100%;
+}
+div[contact] div:hover{
+    background: rgb(230, 230, 230);
+    cursor: pointer;
+}
+.filled{
+    color: goldenrod;
+}
+.unfilled{
+    color: lightgray;
+}
+[vcv]{
+    color: darkslateblue;
+    margin: 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+[profile-div] h3{
+    font-weight: lighter;
+    text-align: left;
+}
+[profile-div]{
+    padding: 0px 15%;
+    
+}
+[profile-div] [profile-tab] h3{
+    border-bottom: 1px solid lightgrey;
+    margin: 0px 5%;
+}
+[profile-div] [profile-tab] i.fa-ellipsis{
+    float: right;
+    cursor: default;
+    
+} 
+[profile-tab]{
+margin-top: 30px;    
+}
+div.content{
+    text-align: justify;
+    padding: 10px 5%;
+}
