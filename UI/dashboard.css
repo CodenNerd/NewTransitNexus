@@ -2,18 +2,19 @@ body{
     margin: 0px;
     font-family: "Century Gothic", "Franklin Gothic Medium", "Arial Narrow", Arial,
     sans-serif;
-    color: grey;
+    color: white;
 }
 *{
     box-sizing: border-box;
 }
 div.nav{
-    background: white;
+    background: navy;
     box-shadow: 1px 1px 5px grey;
-    color: darkslateblue;
+    color: white;
     height: 40px;
     width: 100%;
     position: fixed;
+    z-index: 2;
 }
 div.nav>i.fas.fa-bars{
     font-size: 26px;
@@ -22,10 +23,12 @@ div.nav>i.fas.fa-bars{
 }
 div.nav > div.search{
     display: block;
-    margin: 0px auto 0px auto;
+    margin: auto;
     width: 50%;
-    margin-top: -35px;  
+    margin-top: -15px;  
 }
+
+
 div.nav > div.search> input{
     border: 1px solid grey;
     height: 30px;
@@ -41,7 +44,7 @@ div.search>i.fas.fa-search{
 div.search i.far.fa-paper-plane{
     transform: rotateZ(60deg);
     font-size: 16px;
-    color: grey;
+    color: navy;
    
 }
 [plane-span]{
@@ -56,52 +59,33 @@ div.search i.far.fa-paper-plane{
 div.nav>i.fas.fa-comment-dots, div.nav>i.fas.fa-cog{
     position: relative;
     top: 12px;
-    left: 75%;
+    float: right;
     margin: 0px 10px;
 }
+
 span[balance]{
     float: right;
     margin: 10px;
+    display: none;
 }
 
-@media screen and (max-width: 900px){
-    [plane-span]{
-        padding: 5px 0px;
-        border-left: none;
-    }
-    div.nav>i.fas.fa-comment-dots, div.nav>i.fas.fa-cog{
-        
-        left: 75%;
-       
-    }
-}
-@media screen and (max-width: 800px){
-    
-    div.nav>i.fas.fa-comment-dots, div.nav>i.fas.fa-cog{
-        
-        left: 70%;
-       
-    }
-}
-@media screen and (max-width: 700px){
-    
-    span[balance]{
-        display: none;
-    }
-}
 
-/* End of Nav */
+
+                                    /* END OF NAV */
+
+
+                                    
 
 div[main-container]{
-    margin: 0px auto;
-    width: 70%;
-    height: 1000px;
-    padding: 100px 10px;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 100px 0px;
     text-align: center;
 }
 div[main-container] i.far.fa-user{
     font-size: 150px;
-    color: darkslateblue;
+    color: navy;
 }
 
 div[main-container] div[contact]{
@@ -109,14 +93,14 @@ div[main-container] div[contact]{
     text-align: center;
     width: 200px;
     margin: 10px;
-    font-size: 14px;
+    font-size: 18px;
 }
 div[contact] div{
     display: inline-block;
     padding: 5px;
     width: 48%;
-    color: darkslateblue;
-    border: 1px solid grey;
+    color: navy;
+    border: 2px solid navy;
     border-radius: 5px;
     margin: 2px;
     transition: 0.5s;
@@ -125,7 +109,8 @@ div[contact] div[follow]{
     width: 100%;
 }
 div[contact] div:hover{
-    background: rgb(230, 230, 230);
+    background: navy;
+    color: white; 
     cursor: pointer;
 }
 .filled{
@@ -135,32 +120,137 @@ div[contact] div:hover{
     color: lightgray;
 }
 [vcv]{
-    color: darkslateblue;
+    border: 2px solid navy;
+    background: navy;
+    color: white;
     margin: 10px;
+    padding: 10px 20px;
+    border-radius: 32px;
     display: inline-block;
     text-decoration: none;
+    font-weight: bold;
 }
-[profile-div] h3{
-    font-weight: lighter;
+
+[profile-div]{
+    padding: 0px;
+}
+
+h2 {
+    color: navy;
+    font-weight: bold;
     text-align: left;
 }
-[profile-div]{
-    padding: 0px 15%;
-    
-}
-[profile-div] [profile-tab] h3{
-    border-bottom: 1px solid lightgrey;
+
+h3{
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    border-bottom: 1px solid white;
     margin: 0px 5%;
 }
-[profile-div] [profile-tab] i.fa-ellipsis{
-    float: right;
-    cursor: default;
-    
-} 
-[profile-tab]{
-margin-top: 30px;    
+
+.skew2 h3{
+    font-weight: bold;
+    text-align: left;
+    color: navy;
+    border-bottom: 1px solid navy;
+    margin: 0px 5%;
 }
-div.content{
+
+
+.skew1{
+    background: navy;
+    color: white;
+    position: relative;
+    padding: 25px 0px;
+}
+.skew2 {
+    background: white;
+    color: navy;
+    position: relative;
+    padding: 25px 0px 0px;
+}
+
+.skew3{
+    background: navy;
+    color: white;
+    position: relative;
+    padding: 50px 0px 25px;
+}
+
+.skew2::before {
+    content: '';
+    position: absolute;
+    border-bottom: 50px solid white;
+    border-left: 100vw solid transparent;
+    top: -50px;
+    left: 0%;
+}
+
+.skew2::after {
+    content: '';
+    position: absolute;
+    border-top: 50px solid white;
+    border-right: 100vw solid transparent;
+    bottom: -50px;
+    left: 0%;
+    z-index: 1;
+}
+
+.fa-ellipsis{
+    float: right;
+    cursor: default;    
+} 
+
+.content{
     text-align: justify;
     padding: 10px 5%;
 }
+
+
+                                /* MEDIA QUERY */
+
+
+@media screen and (min-width: 420px){
+
+    div.nav > div.search{
+        display: block;
+        margin: auto;
+        width: 50%;
+        margin-top: -15px;  
+    }
+
+
+    div.nav>i.fas.fa-comment-dots, div.nav>i.fas.fa-cog{
+        position: relative;
+        top: 12px;
+        float: right;
+        margin: 0px 10px;
+    }
+
+    span[balance]{
+        float: right;
+        margin: 10px;
+        display: block;
+    }
+
+
+    div[main-container]{
+        margin: 0 10%;
+        padding: 100px, 0;
+        width: 80%;
+        height: auto;
+        text-align: center;
+    }
+
+    .skew2::before {
+        border-left: 80vw solid transparent;
+    }
+    
+    .skew2::after {
+        border-right: 80vw solid transparent;
+    }
+
+}
+                                
+                                
